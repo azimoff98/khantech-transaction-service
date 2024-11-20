@@ -27,6 +27,11 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
+    public List<Transaction> findAllByUserId(long userId, Pageable pageable) {
+        return transactionRepository.findAllByUserId(userId, pageable);
+    }
+
+    @Override
     public List<Transaction> findAll(Pageable pageable) {
         return transactionRepository.findAll(pageable).stream().toList();
     }

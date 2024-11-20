@@ -30,7 +30,7 @@ public class WalletController implements TransactionApiBuilder {
             @PathVariable("userId") long userId,
             @RequestParam("page") int page,
             @RequestParam("size") int size) {
-        var response = transactionService.findAll(PageRequest.of(page, size))
+        var response = transactionService.findAllByUserId(userId, PageRequest.of(page, size))
                 .stream()
                 .map(mapper::toResponse)
                 .toList();

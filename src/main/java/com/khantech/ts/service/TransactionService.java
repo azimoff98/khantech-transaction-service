@@ -10,6 +10,8 @@ public interface TransactionService {
 
     List<Transaction> findAll(Pageable pageable);
 
+    List<Transaction> findAllByUserId(long userId, Pageable pageable);
+
     Transaction findById(long id);
     List<Transaction> findAllByStatus(TransactionStatus transactionStatus);
 

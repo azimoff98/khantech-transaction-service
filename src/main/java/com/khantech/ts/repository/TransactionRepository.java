@@ -1,6 +1,7 @@
 package com.khantech.ts.repository;
 
 import com.khantech.ts.entity.Transaction;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -11,4 +12,5 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
     List<Transaction> findAllByTransactionStatus(int transactionStatus);
+    List<Transaction> findAllByUserId(long userId, Pageable page);
 }
