@@ -35,6 +35,6 @@ public class TransactionScheduler {
         List<Transaction> awaitingTransactions = transactionService.findAllByStatus(TransactionStatus.AWAITING_PROCESSING);
         log.info("Total {} awaiting transactions found", awaitingTransactions.size());
 
-        awaitingTransactions.forEach(transactionProcessingService::processTransaction);
+        awaitingTransactions.forEach(transactionProcessingService:: processTransaction);
     }
 }

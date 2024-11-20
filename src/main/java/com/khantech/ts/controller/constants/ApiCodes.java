@@ -8,7 +8,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ApiCodes implements MessageCodeProvider {
 
-    TRANSACTION_SUCCESSFUL(10, "Transaction Successfully Created"),
+    TRANSACTION_SUCCESSFUL(10, "Transaction Successfully Processed"),
     TRANSACTION_APPROVED(11, "Transaction Approved"),
     SUCCESSFUL_RESPONSE(12, "Successful Response"),
     USER_CREATED(13, "User successfully created")

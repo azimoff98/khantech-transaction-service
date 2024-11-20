@@ -18,5 +18,3 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-
-#    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

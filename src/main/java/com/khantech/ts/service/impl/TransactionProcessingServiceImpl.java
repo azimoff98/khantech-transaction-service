@@ -57,9 +57,6 @@ public class TransactionProcessingServiceImpl implements TransactionProcessingSe
 
     @Transactional
     public Transaction processTransaction(Transaction transaction, User user, TransactionValidationResult validationResult) {
-        if(transaction.getAmount().equals(new BigDecimal("500"))) {
-            throw new RuntimeException();
-        }
         log.debug("pending transaction created : {}", transaction);
         TransactionStatus transactionStatus = createTransactionStatus(transaction, validationResult);
         log.debug("transaction status created: {}", transactionStatus);
