@@ -26,7 +26,7 @@ This service handles user transactions, supports manual approvals for transactio
 * SLF4J for logging
 
 ## Room for improvement
-* Use **Quarts Scheduler** to handle scheduling effectively in multi-instance environment. 
+* Use **Quartz Scheduler** to handle scheduling effectively in multi-instance environment. 
 * Transitioning to a robust persistent database like PostgreSQL or MySQL to ensure data durability and better support for large-scale transactions
 * Implement distributed locking mechanisms, such as RLock, to support parallel processing across multiple instances. 
 
